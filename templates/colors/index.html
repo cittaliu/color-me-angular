@@ -3,7 +3,16 @@
 <p>Your goal is to:</p>
 
 <ol>
-  <li>Display all the colors in colorsCtrl.colors, using ngRepeat</li>
-  <li>Link to each individual color show page, using button tags and ngHref</li>
-  <li>Style each button to with the corresponding color, using ngStyle</li>
+    <li>Display all the colors in colorsCtrl.colors, using ngRepeat</li>
+    <li>Link to each individual color show page, using button tags and ngHref</li>
+    <li>Style each button to with the corresponding color, using ngStyle</li>
 </ol>
+
+<br><br>
+<input type="text" class="form-control" ng-model="searchText" placeholder="Search Colors">
+<br><br>
+<div ng-repeat="color in colorsCtrl.colors| filter: searchText">
+
+    <button class="btn btn-default col-md-2 col-xs-2" ng-style={'background-color':'#'+'{{color.hex}}'}><a ng-href="colors/{{$index}}">{{color.name}}</button>
+
+</div>

@@ -8,3 +8,12 @@
   <li>Display the actual color, using ngStyle</li>
   <li>Add a "Back" button that returns to the homepage</li>
 </ol>
+<div class="col-md-12">
+    <button class='btn btn-danger col-md-1'><a ng-href="/">Back</a></button>
+</div>
+
+<div class="col-md-12">
+    <h5>Color: {{colorCtrl.color.name}}</h5>
+
+    <button class="btn btn-default col-md-2 col-xs-2 col-offset-2" ng-style={'background-color':'#'+'{{colorCtrl.color.hex}}'}>Hex: {{colorCtrl.color.hex}}</button>
+</div>
